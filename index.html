@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KeyFlow — Virtual Keyboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="logo"><span>⌨</span> KeyFlow</div>
+  <nav><a href="#keyboard">Keyboard</a><a href="#features">Features</a><a href="#about">About</a></nav>
+  <div class="status"><i></i> READY</div>
+</header>
+
+<main>
+<section class="hero">
+  <div>
+    <p class="eyebrow">TASK 13 · VIRTUAL KEYBOARD</p>
+    <h1>Type without<br><i>touching a keyboard.</i></h1>
+    <p>A responsive on-screen keyboard built with HTML, CSS and JavaScript. Click the keys, type in the editor, and use interactive controls just like a real keyboard.</p>
+    <a href="#keyboard" class="primary">Start Typing ↓</a>
+  </div>
+  <div class="hero-device">
+    <div class="device-top"><span>KeyFlow</span><span>● ● ●</span></div>
+    <div class="device-text">Your text<br><b>starts here.</b><span class="cursor"></span></div>
+    <div class="mini-keys"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  </div>
+</section>
+
+<section class="workspace" id="keyboard">
+  <div class="section-head">
+    <div><p class="eyebrow">VIRTUAL KEYBOARD</p><h2>Type something.</h2></div>
+    <div class="tools"><span id="charCount">0 characters</span><button onclick="clearText()">Clear</button></div>
+  </div>
+
+  <div class="editor-wrap">
+    <textarea id="editor" spellcheck="false" placeholder="Click the virtual keys below to start typing..."></textarea>
+    <div class="editor-footer"><span id="wordCount">0 words</span><span>Click keys or use your physical keyboard</span></div>
+  </div>
+
+  <div class="keyboard" id="keyboardArea">
+    <div class="key-row">
+      <button data-key="`" class="key small">`<small>~</small></button>
+      <button data-key="1" class="key small">1<small>!</small></button>
+      <button data-key="2" class="key small">2<small>@</small></button>
+      <button data-key="3" class="key small">3<small>#</small></button>
+      <button data-key="4" class="key small">4<small>$</small></button>
+      <button data-key="5" class="key small">5<small>%</small></button>
+      <button data-key="6" class="key small">6<small>^</small></button>
+      <button data-key="7" class="key small">7<small>&amp;</small></button>
+      <button data-key="8" class="key small">8<small>*</small></button>
+      <button data-key="9" class="key small">9<small>(</small></button>
+      <button data-key="0" class="key small">0<small>)</small></button>
+      <button data-key="-" class="key small">-<small>_</small></button>
+      <button data-key="=" class="key small">=<small>+</small></button>
+      <button data-key="BACKSPACE" class="key wide">Backspace</button>
+    </div>
+    <div class="key-row">
+      <button data-key="TAB" class="key wide">Tab</button>
+      <button data-key="q" class="key">Q</button><button data-key="w" class="key">W</button><button data-key="e" class="key">E</button><button data-key="r" class="key">R</button><button data-key="t" class="key">T</button><button data-key="y" class="key">Y</button><button data-key="u" class="key">U</button><button data-key="i" class="key">I</button><button data-key="o" class="key">O</button><button data-key="p" class="key">P</button>
+      <button data-key="[" class="key small">[<small>{</small></button><button data-key="]" class="key small">]<small>}</small></button><button data-key="\" class="key small">\ <small>|</small></button>
+    </div>
+    <div class="key-row">
+      <button data-key="CAPS" class="key wide" id="capsKey">Caps Lock</button>
+      <button data-key="a" class="key">A</button><button data-key="s" class="key">S</button><button data-key="d" class="key">D</button><button data-key="f" class="key">F</button><button data-key="g" class="key">G</button><button data-key="h" class="key">H</button><button data-key="j" class="key">J</button><button data-key="k" class="key">K</button><button data-key="l" class="key">L</button>
+      <button data-key=";" class="key small">;<small>:</small></button><button data-key="'" class="key small">'<small>"</small></button><button data-key="ENTER" class="key wide">Enter</button>
+    </div>
+    <div class="key-row">
+      <button data-key="SHIFT" class="key shift">Shift</button>
+      <button data-key="z" class="key">Z</button><button data-key="x" class="key">X</button><button data-key="c" class="key">C</button><button data-key="v" class="key">V</button><button data-key="b" class="key">B</button><button data-key="n" class="key">N</button><button data-key="m" class="key">M</button>
+      <button data-key="," class="key small">,<small>&lt;</small></button><button data-key="." class="key small">.<small>&gt;</small></button><button data-key="/" class="key small">/<small>?</small></button>
+      <button data-key="SHIFT" class="key shift">Shift</button>
+    </div>
+    <div class="key-row bottom">
+      <button data-key="CTRL" class="key modifier">Ctrl</button>
+      <button data-key="ALT" class="key modifier">Alt</button>
+      <button data-key=" " class="key space">Space</button>
+      <button data-key="ALT" class="key modifier">Alt</button>
+      <button data-key="CTRL" class="key modifier">Ctrl</button>
+    </div>
+  </div>
+  <div class="keyboard-tip">💡 <b>Tip:</b> You can also use your physical keyboard. The matching virtual key will light up as you type.</div>
+</section>
+
+<section class="features" id="features">
+  <p class="eyebrow">INTERACTIVE FEATURES</p>
+  <h2>A keyboard that actually responds.</h2>
+  <div class="feature-grid">
+    <article><span>⌨</span><h3>On-screen typing</h3><p>Click any virtual key to insert its character directly into the text editor.</p></article>
+    <article><span>⇧</span><h3>Shift & Caps Lock</h3><p>Toggle uppercase letters and use shifted symbols just like a physical keyboard.</p></article>
+    <article><span>↵</span><h3>Keyboard controls</h3><p>Backspace, Enter, Tab, Space and modifier keys have interactive functionality.</p></article>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div><p class="eyebrow">ABOUT THE PROJECT</p><h2>Virtual Keyboard</h2></div>
+  <p>This web-based virtual keyboard demonstrates HTML for the interface, CSS for the keyboard layout and JavaScript for interactive key input, modifier states, physical-key synchronization, text editing and live statistics.</p>
+</section>
+</main>
+
+<footer><div class="logo"><span>⌨</span> KeyFlow</div><p>Task 13 · HTML · CSS · JavaScript · 2026</p></footer>
+<script src="script.js"></script>
+</body>
+</html>

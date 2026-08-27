@@ -1,0 +1,516 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap');
+
+:root {
+    --ink: #181b1a;
+    --muted: #777d79;
+    --paper: #f4f4ef;
+    --white: #fff;
+    --line: #dedfd8;
+    --green: #356d4f;
+    --green-bg: #e7f1e9;
+    --key: #262a29;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "DM Sans", sans-serif;
+}
+
+button,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    height: 74px;
+    background: #fff;
+    border-bottom: 1px solid var(--line);
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    gap: 42px;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+}
+
+.logo span {
+    display: inline-flex;
+    width: 29px;
+    height: 29px;
+    background: var(--ink);
+    color: #fff;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 6px;
+    font-size: 13px;
+}
+
+nav {
+    display: flex;
+    gap: 29px;
+    color: #777;
+    font-size: 13px;
+}
+
+nav a:hover {
+    color: var(--green);
+}
+
+.status {
+    margin-left: auto;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    color: #777;
+}
+
+.status i {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    background: #69a87f;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.hero {
+    background: #fff;
+    min-height: 510px;
+    padding: 70px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
+}
+
+.eyebrow {
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 800;
+    color: var(--green);
+    margin: 0 0 12px;
+}
+
+.hero h1 {
+    font: 700 clamp(48px, 6vw, 75px) / 0.95
+        "Playfair Display", serif;
+    letter-spacing: -3px;
+    margin: 0 0 22px;
+}
+
+.hero h1 i {
+    color: var(--green);
+    font-weight: 600;
+}
+
+.hero p:not(.eyebrow) {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.75;
+    max-width: 550px;
+    margin-bottom: 28px;
+}
+
+.primary {
+    display: inline-block;
+    background: var(--green);
+    color: #fff;
+    border: 0;
+    border-radius: 9px;
+    padding: 13px 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.hero-device {
+    width: 360px;
+    height: 280px;
+    background: #202624;
+    border-radius: 19px;
+    padding: 18px 20px;
+    color: #fff;
+    box-shadow: 0 25px 55px #0002;
+    transform: rotate(2deg);
+}
+
+.device-top {
+    display: flex;
+    justify-content: space-between;
+    font-size: 9px;
+    color: #8d9991;
+}
+
+.device-text {
+    margin-top: 48px;
+    color: #8e9792;
+    font: 20px "Playfair Display";
+    line-height: 1.4;
+}
+
+.device-text b {
+    color: #fff;
+}
+
+.cursor {
+    display: inline-block;
+    height: 22px;
+    border-left: 2px solid #9cc7aa;
+    margin-left: 3px;
+    vertical-align: middle;
+}
+
+.mini-keys {
+    display: flex;
+    gap: 7px;
+    margin-top: 43px;
+}
+
+.mini-keys i {
+    height: 30px;
+    background: #343a37;
+    border-radius: 5px;
+    flex: 1;
+}
+
+.mini-keys i:nth-child(3) {
+    background: #4c765c;
+}
+
+.workspace {
+    padding: 70px 6%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 20px;
+}
+
+.section-head h2,
+.features h2,
+.about h2 {
+    font: 600 37px "Playfair Display";
+    margin: 0;
+}
+
+.tools {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tools span {
+    font-size: 10px;
+    color: #999;
+}
+
+.tools button {
+    border: 1px solid var(--line);
+    background: #fff;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 10px;
+}
+
+.editor-wrap {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.editor-wrap textarea {
+    display: block;
+    width: 100%;
+    height: 180px;
+    border: 0;
+    outline: 0;
+    resize: vertical;
+    padding: 22px;
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--ink);
+}
+
+.editor-wrap textarea::placeholder {
+    color: #b2b5b1;
+}
+
+.editor-footer {
+    border-top: 1px solid var(--line);
+    padding: 10px 17px;
+    display: flex;
+    justify-content: space-between;
+    color: #999;
+    font-size: 9px;
+}
+
+.keyboard {
+    background: #dfe1dc;
+    border: 1px solid #d3d5d0;
+    border-radius: 16px;
+    padding: 17px;
+    margin-top: 18px;
+    box-shadow: 0 15px 40px #00000012;
+}
+
+.key-row {
+    display: flex;
+    gap: 7px;
+    margin-bottom: 7px;
+}
+
+.key-row:last-child {
+    margin-bottom: 0;
+}
+
+.key {
+    height: 54px;
+    flex: 1;
+    min-width: 0;
+    border: 0;
+    border-radius: 7px;
+    background: var(--key);
+    color: #f7f8f6;
+    box-shadow: 0 3px 0 #111816;
+    font-size: 13px;
+    font-weight: 600;
+    position: relative;
+    transition: 0.06s;
+}
+
+.key:hover {
+    background: #343a38;
+}
+
+.key:active,
+.key.active {
+    transform: translateY(3px);
+    box-shadow: 0 0 0 #111816;
+    background: var(--green);
+}
+
+.key small {
+    position: absolute;
+    top: 7px;
+    right: 8px;
+    font-size: 8px;
+    color: #aeb5b0;
+    font-weight: 400;
+}
+
+.key.wide {
+    flex: 1.7;
+}
+
+.key.shift {
+    flex: 2;
+}
+
+.key.space {
+    flex: 6;
+}
+
+.key.modifier {
+    flex: 1.3;
+}
+
+.key.caps-on {
+    background: var(--green);
+    box-shadow: 0 3px 0 #244a36;
+}
+
+.keyboard-tip {
+    margin-top: 13px;
+    font-size: 10px;
+    color: #999;
+}
+
+.keyboard-tip b {
+    color: #666;
+}
+
+.features {
+    background: #fff;
+    padding: 75px 8%;
+}
+
+.features h2 {
+    margin-bottom: 32px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.feature-grid article {
+    border: 1px solid var(--line);
+    border-radius: 15px;
+    padding: 27px;
+}
+
+.feature-grid article > span {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: var(--green-bg);
+    color: var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.feature-grid h3 {
+    font-size: 14px;
+    margin: 22px 0 7px;
+}
+
+.feature-grid p {
+    font-size: 11px;
+    line-height: 1.7;
+    color: #888;
+    margin: 0;
+}
+
+.about {
+    background: var(--ink);
+    color: #fff;
+    padding: 70px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.about .eyebrow {
+    color: #91c7a5;
+}
+
+.about h2 {
+    margin: 0;
+}
+
+.about > p {
+    color: #aaa;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+footer {
+    background: #111;
+    color: #fff;
+    padding: 28px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p {
+    font-size: 10px;
+    color: #777;
+}
+
+@media (max-width: 900px) {
+    nav {
+        display: none;
+    }
+
+    .hero {
+        padding: 60px 6%;
+    }
+
+    .hero-device {
+        width: 310px;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .workspace,
+    .features,
+    .about {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+}
+
+@media (max-width: 650px) {
+    header {
+        padding: 0 5%;
+    }
+
+    .hero {
+        display: block;
+    }
+
+    .hero-device {
+        margin: 40px auto 0;
+        width: 100%;
+        max-width: 360px;
+    }
+
+    .section-head {
+        display: block;
+    }
+
+    .tools {
+        margin-top: 15px;
+    }
+
+    .keyboard {
+        padding: 7px;
+        overflow-x: auto;
+    }
+
+    .key-row {
+        min-width: 700px;
+    }
+
+    .editor-wrap textarea {
+        height: 150px;
+    }
+
+    .about h2,
+    .features h2,
+    .section-head h2 {
+        font-size: 31px;
+    }
+}
